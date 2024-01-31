@@ -17,6 +17,17 @@ target_include_directories(follow_1D PRIVATE
   include
 )
 
+# Drive star executable.
+add_executable(drive_star
+  src/drive_star.cpp
+)
+target_link_libraries(drive_star
+  mbot_bridge_cpp
+)
+target_include_directories(drive_star PRIVATE
+  include
+)
+
 # 2D follow me executable.
 add_executable(follow_2D src/follow_2D.cpp
   src/common/utils.cpp
